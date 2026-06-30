@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo Matheus</title>
+    
+    <style>
+        /* Configurações Globais e Variáveis de Cores */
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #212529;
+            --text-muted: #6c757d;
+            --primary-color: #0056b3;
+            --border-color: #dee2e6;
+            --accent-color: #e9ecef;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --primary-color: #3792ff;
+            --border-color: #333333;
+            --accent-color: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Container Principal */
+        body::before {
+            content: "";
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header, section {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Oculta as linhas HR antigas */
+        hr {
+            display: none;
+        }
+
+        /* Cabeçalho */
+        header {
+            border-left: 6px solid var(--primary-color);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        header p strong {
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        header p:last-child {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+
+        /* Seções e Títulos */
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Listas Gerais */
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Tags Estilizadas para Skills e Competências */
+        section:nth-of-type(3) ul, section:nth-of-type(4) ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-left: 0;
+        }
+
+        section:nth-of-type(3) ul li, section:nth-of-type(4) ul li {
+            background: var(--accent-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        section:nth-of-type(3) ul li::before, section:nth-of-type(4) ul li::before {
+            content: "";
+        }
+
+        /* Botão de Alternar Tema */
+        .theme-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s, background-color 0.3s;
+            z-index: 1000;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsividade Celular */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            header, section {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .theme-btn {
+                position: static;
+                display: block;
+                margin: 0 auto 20px auto;
+                width: 150px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão de Alternar Tema -->
+    <button id="theme-toggle" class="theme-btn">🌓 Alternar Tema</button>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Matheus</h1>
+        <p><strong>Technology Student | Developer in Training | IT Infrastructure Intern</strong></p>
+        <p>Belo Horizonte, MG, Brazil</p>
+    </header>
+
+    <hr>
+
+    <!-- Resumo Profissional -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am a technology student with a strong interest in Software Development and Artificial Intelligence, currently in my third year of a Technical High School program in Information Technology at 'Colégio e Faculdade COTEMIG'. Throughout my education, I have been building a solid technical foundation, combining theory and practice across different areas of Information Technology.</p>
+        <p>I am seeking opportunities that support my technical and professional growth, enabling continuous learning and meaningful contributions to projects and teams, always with responsibility, dedication, and a strong willingness to learn.</p>
+    </section>
+
+    <hr>
+
+    <!-- Educação e Formação -->
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Technical High School in Information Technology</strong><br>
+                Colégio e Faculdade COTEMIG<br>
+                Status: Third year (In progress)
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Competências Técnicas (Hard Skills) -->
+    <section>
+        <h2>Technical Skills</h2>
+        <p>I have knowledge of several programming languages and technologies, constantly seeking to deepen my skills and apply them to solve real-world problems:</p>
+        <ul>
+            <li>Kotlin</li>
+            <li>Swift</li>
+            <li>Dart</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Competências Comportamentais (Soft Skills) -->
+    <section>
+        <h2>Behavioral Competencies</h2>
+        <p>I have a proactive, organized, and collaborative profile, with the ability to work well in teams and strong interpersonal communication skills. My main qualities include:</p>
+        <ul>
+            <li>Responsibility</li>
+            <li>Emotional intelligence</li>
+            <li>Commitment</li>
+            <li>Ethics</li>
+        </ul>
+    </section>
+
+    <!-- Código JavaScript Integrado -->
+     <!-- Código JavaScript Integrado (Sem Arrow Functions) -->
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var themeToggleBtn = document.getElementById('theme-toggle');
+            var currentTheme = localStorage.getItem('theme');
+            
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+            } else {
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (prefersDark) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            }
+
+            themeToggleBtn.addEventListener('click', function() {
+                var theme = document.documentElement.getAttribute('data-theme');
+                
+                if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
